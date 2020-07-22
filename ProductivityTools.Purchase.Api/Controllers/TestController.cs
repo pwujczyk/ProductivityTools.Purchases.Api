@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProductivityTools.Purchase.Api.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class TestController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public string Index()
         {
-            return View();
+            return DateTime.Now.ToString();
         }
     }
 }
