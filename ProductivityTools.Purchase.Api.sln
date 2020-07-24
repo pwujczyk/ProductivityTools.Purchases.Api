@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api.DbUp", "ProductivityTools.Purchase.Api.DbUp\ProductivityTools.Purchase.Api.DbUp.csproj", "{8E965D17-9BCC-4352-B4A6-C313CF62511A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api.Db", "ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Db.csproj", "{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api.Database", "ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Database.csproj", "{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api.Model", "ProductivityTools.Purchase.Api.Model\ProductivityTools.Purchase.Api.Model.csproj", "{88262C1E-FD9B-43D1-9EB5-B16D5F435A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88262C1E-FD9B-43D1-9EB5-B16D5F435A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88262C1E-FD9B-43D1-9EB5-B16D5F435A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88262C1E-FD9B-43D1-9EB5-B16D5F435A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88262C1E-FD9B-43D1-9EB5-B16D5F435A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
