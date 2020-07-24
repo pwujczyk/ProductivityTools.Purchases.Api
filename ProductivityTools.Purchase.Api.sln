@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api", "ProductivityTools.Purchase.Api\ProductivityTools.Purchase.Api.csproj", "{02989661-D258-4681-B186-84EFFF0ADF1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api", "ProductivityTools.Purchase.Api\ProductivityTools.Purchase.Api.csproj", "{02989661-D258-4681-B186-84EFFF0ADF1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api.DbUp", "ProductivityTools.Purchase.Api.DbUp\ProductivityTools.Purchase.Api.DbUp.csproj", "{8E965D17-9BCC-4352-B4A6-C313CF62511A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api.DbUp", "ProductivityTools.Purchase.Api.DbUp\ProductivityTools.Purchase.Api.DbUp.csproj", "{8E965D17-9BCC-4352-B4A6-C313CF62511A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Purchase.Api.Db", "ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Db.csproj", "{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8E965D17-9BCC-4352-B4A6-C313CF62511A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E965D17-9BCC-4352-B4A6-C313CF62511A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E965D17-9BCC-4352-B4A6-C313CF62511A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
