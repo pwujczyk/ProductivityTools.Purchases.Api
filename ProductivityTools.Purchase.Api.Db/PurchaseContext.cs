@@ -23,8 +23,9 @@ namespace ProductivityTools.Purchase.Api.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("bm");
+            modelBuilder.HasDefaultSchema("pc");
             modelBuilder.Entity<Model.Purchase>().HasKey(x => x.PurchaseId);
+            modelBuilder.Entity<Model.PurchaseItem>().HasKey(x => x.PurchaseItemId);
 
             base.OnModelCreating(modelBuilder);
         }
