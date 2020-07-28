@@ -12,7 +12,7 @@ namespace ProductivityTools.Purchase.Api.Controllers
     {
         [HttpPost]
         [Route("Add")]
-        public IActionResult Add(object x)
+        public IActionResult Add(Model.Purchase purchase)
         {
             return View();
         }
