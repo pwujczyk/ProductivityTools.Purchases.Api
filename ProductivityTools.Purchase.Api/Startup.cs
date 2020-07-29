@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ProductivityTools.Purchase.Api.Command;
 
 namespace ProductivityTools.Purchase.Api
 {
@@ -26,6 +27,7 @@ namespace ProductivityTools.Purchase.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.RegisterePurchaseServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

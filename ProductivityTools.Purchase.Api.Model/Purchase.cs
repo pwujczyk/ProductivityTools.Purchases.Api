@@ -4,6 +4,6 @@ namespace ProductivityTools.Purchase.Api.Model
 {
     public class Purchase
     {
-        public int PurchaseId { get; set; }
+        public int Id { get; set; }
     }
 }

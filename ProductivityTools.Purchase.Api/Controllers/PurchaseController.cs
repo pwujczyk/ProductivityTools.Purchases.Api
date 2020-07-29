@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ProductivityTools.Purchase.Api.Command;
 
 namespace ProductivityTools.Purchase.Api.Controllers
 {
@@ -10,11 +12,19 @@ namespace ProductivityTools.Purchase.Api.Controllers
     [Route("[controller]")]
     public class PurchaseController : Controller
     {
+        readonly IPurchaseCommand PurchaseCommand;
+
+        public PurchaseController(IPurchaseCommand purchaseCommand)
+        {
+            this.PurchaseCommand = purchaseCommand;
+        }
+
         [HttpPost]
         [Route("Add")]
-        public IActionResult Add(Model.Purchase purchase)
+        public HttpStatusCode Add(Model.Purchase purchase)
         {
-            return View();
+            this.PurchaseCommand.AddPurchase(purchase);
+            return HttpStatusCode.OK;
         }
     }
 }

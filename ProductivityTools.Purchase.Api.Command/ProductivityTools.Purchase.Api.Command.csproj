@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Database.csproj" />
+    <ProjectReference Include="..\ProductivityTools.Purchase.Api.Model\ProductivityTools.Purchase.Api.Model.csproj" />
+  </ItemGroup>
+
+</Project>
