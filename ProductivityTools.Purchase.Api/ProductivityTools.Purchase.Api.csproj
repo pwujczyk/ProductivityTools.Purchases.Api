@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration.csproj" />
     <ProjectReference Include="..\ProductivityTools.Purchase.Api.Command\ProductivityTools.Purchase.Api.Command.csproj" />
     <ProjectReference Include="..\ProductivityTools.Purchase.Api.Model\ProductivityTools.Purchase.Api.Model.csproj" />
   </ItemGroup>
