@@ -1,6 +1,6 @@
 using System;
 
-namespace ProductivityTools.Purchase.Api
+namespace ProductivityTools.Purchases.Api
 {
     public class WeatherForecast
     {

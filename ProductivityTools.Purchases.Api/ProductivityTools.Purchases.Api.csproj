@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration.csproj" />
-    <ProjectReference Include="..\ProductivityTools.Purchase.Api.Command\ProductivityTools.Purchase.Api.Command.csproj" />
+    <ProjectReference Include="..\ProductivityTools.Purchases.Api.Command\ProductivityTools.Purchases.Api.Command.csproj" />
   </ItemGroup>
 
 </Project>

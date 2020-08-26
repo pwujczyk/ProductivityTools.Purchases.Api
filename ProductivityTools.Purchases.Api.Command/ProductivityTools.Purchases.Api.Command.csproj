@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Database.csproj" />
+    <ProjectReference Include="..\ProductivityTools.Purchases.Api.Db\ProductivityTools.Purchases.Api.Database.csproj" />
   </ItemGroup>
 
 </Project>

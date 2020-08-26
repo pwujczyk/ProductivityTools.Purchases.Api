@@ -10,9 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ProductivityTools.Purchase.Api.Command;
+using ProductivityTools.Purchases.Api.Command;
 
-namespace ProductivityTools.Purchase.Api
+namespace ProductivityTools.Purchases.Api
 {
     public class Startup
     {

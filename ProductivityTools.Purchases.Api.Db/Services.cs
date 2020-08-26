@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace ProductivityTools.Purchase.Api.Database
+namespace ProductivityTools.Purchases.Api.Database
 {
     public static class Services
     {

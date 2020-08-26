@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
+using ProductivityTools.Purchases.Contract;
 
-namespace ProductivityTools.Purchase.Api.Database
+namespace ProductivityTools.Purchases.Api.Database
 {
     public class PurchaseContext : DbContext
     {
@@ -19,14 +20,14 @@ namespace ProductivityTools.Purchase.Api.Database
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<Contract.Purchase> Purchase { get; set; }
+        public DbSet<Purchase> Purchase { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("pc");
-            modelBuilder.Entity<Contract.Purchase>()
+            modelBuilder.Entity<Purchase>()
                 .HasKey(x => x.Id);
-            modelBuilder.Entity<Contract.PurchaseItem>()
+            modelBuilder.Entity<PurchaseItem>()
                 .HasKey(x => x.Id);
 
             base.OnModelCreating(modelBuilder);

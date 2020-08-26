@@ -4,9 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ProductivityTools.Purchase.Api.Command;
+using ProductivityTools.Purchases.Api.Command;
+using ProductivityTools.Purchases.Contract;
 
-namespace ProductivityTools.Purchase.Api.Controllers
+namespace ProductivityTools.Purchases.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,7 +22,7 @@ namespace ProductivityTools.Purchase.Api.Controllers
 
         [HttpPost]
         [Route("Add")]
-        public HttpStatusCode Add(Contract.Purchase purchase)
+        public HttpStatusCode Add(Purchase purchase)
         {
             this.PurchaseCommand.AddPurchase(purchase);
             return HttpStatusCode.OK;

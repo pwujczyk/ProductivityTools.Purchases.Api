@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProductivityTools.Purchase.Api.Controllers
+namespace ProductivityTools.Purchases.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

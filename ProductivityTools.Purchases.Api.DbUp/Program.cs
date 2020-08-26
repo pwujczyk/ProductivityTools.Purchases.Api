@@ -2,7 +2,7 @@
 using System;
 using System.Reflection;
 
-namespace ProductivityTools.Purchase.Api.DbUp
+namespace ProductivityTools.Purchases.Api.DbUp
 {
     class Program
     {

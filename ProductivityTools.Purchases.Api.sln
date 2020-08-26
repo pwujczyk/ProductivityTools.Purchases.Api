@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api", "ProductivityTools.Purchase.Api\ProductivityTools.Purchase.Api.csproj", "{02989661-D258-4681-B186-84EFFF0ADF1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases.Api", "ProductivityTools.Purchases.Api\ProductivityTools.Purchases.Api.csproj", "{02989661-D258-4681-B186-84EFFF0ADF1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api.DbUp", "ProductivityTools.Purchase.Api.DbUp\ProductivityTools.Purchase.Api.DbUp.csproj", "{8E965D17-9BCC-4352-B4A6-C313CF62511A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases.Api.DbUp", "ProductivityTools.Purchases.Api.DbUp\ProductivityTools.Purchases.Api.DbUp.csproj", "{8E965D17-9BCC-4352-B4A6-C313CF62511A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api.Database", "ProductivityTools.Purchase.Api.Db\ProductivityTools.Purchase.Api.Database.csproj", "{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases.Api.Database", "ProductivityTools.Purchases.Api.Db\ProductivityTools.Purchases.Api.Database.csproj", "{D09336E2-C69E-45ED-B2F5-6F649ECBDAB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchase.Api.Command", "ProductivityTools.Purchase.Api.Command\ProductivityTools.Purchase.Api.Command.csproj", "{C5884FA5-1231-478D-BEF4-A0C335B97401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases.Api.Command", "ProductivityTools.Purchases.Api.Command\ProductivityTools.Purchases.Api.Command.csproj", "{C5884FA5-1231-478D-BEF4-A0C335B97401}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.MasterConfiguration", "..\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration.csproj", "{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}"
 EndProject

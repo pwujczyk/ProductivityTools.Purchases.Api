@@ -1,7 +1,8 @@
-﻿using ProductivityTools.Purchase.Api.Database;
+﻿using ProductivityTools.Purchases.Api.Database;
+using ProductivityTools.Purchases.Contract;
 using System;
 
-namespace ProductivityTools.Purchase.Api.Command
+namespace ProductivityTools.Purchases.Api.Command
 {
     public class PurchaseCommand : IPurchaseCommand
     {
@@ -12,7 +13,7 @@ namespace ProductivityTools.Purchase.Api.Command
             this.PurchaseRepository = purchaseRepository;
         }
 
-        public void AddPurchase(Contract.Purchase purchase)
+        public void AddPurchase(Purchase purchase)
         {
             this.PurchaseRepository.AddPurchase(purchase);
         }

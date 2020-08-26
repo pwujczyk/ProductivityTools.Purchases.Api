@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProductivityTools.Purchase.Api.Database
+namespace ProductivityTools.Purchases.Api.Database
 {
     public class PurchaseRepository : IPurchaseRepository
     {

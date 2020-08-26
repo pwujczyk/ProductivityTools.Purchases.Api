@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using ProductivityTools.MasterConfiguration;
 
-namespace ProductivityTools.Purchase.Api
+namespace ProductivityTools.Purchases.Api
 {
     public class Program
     {

@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using ProductivityTools.Purchase.Api.Database;
+using ProductivityTools.Purchases.Api.Database;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace ProductivityTools.Purchase.Api.Command
+namespace ProductivityTools.Purchases.Api.Command
 {
     public static class Services
     {

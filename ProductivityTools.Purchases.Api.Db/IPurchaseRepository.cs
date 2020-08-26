@@ -1,4 +1,4 @@
-﻿namespace ProductivityTools.Purchase.Api.Database
+﻿namespace ProductivityTools.Purchases.Api.Database
 {
     public interface IPurchaseRepository
     {
