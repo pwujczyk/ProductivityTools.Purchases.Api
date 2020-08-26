@@ -12,7 +12,7 @@ namespace ProductivityTools.Purchase.Api.Command
             this.PurchaseRepository = purchaseRepository;
         }
 
-        public void AddPurchase(Model.Purchase purchase)
+        public void AddPurchase(Contract.Purchase purchase)
         {
             this.PurchaseRepository.AddPurchase(purchase);
         }

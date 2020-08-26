@@ -21,7 +21,7 @@ namespace ProductivityTools.Purchase.Api.Controllers
 
         [HttpPost]
         [Route("Add")]
-        public HttpStatusCode Add(Model.Purchase purchase)
+        public HttpStatusCode Add(Contract.Purchase purchase)
         {
             this.PurchaseCommand.AddPurchase(purchase);
             return HttpStatusCode.OK;

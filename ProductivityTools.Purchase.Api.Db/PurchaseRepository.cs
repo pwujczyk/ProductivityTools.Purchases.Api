@@ -13,7 +13,7 @@ namespace ProductivityTools.Purchase.Api.Database
             this.PurchaseContext = context;
         }
 
-        public void AddPurchase(Model.Purchase purchase)
+        public void AddPurchase(Contract.Purchase purchase)
         {
             this.PurchaseContext.Purchase.Add(purchase);
             this.PurchaseContext.SaveChanges();

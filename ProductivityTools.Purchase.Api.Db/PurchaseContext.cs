@@ -19,16 +19,15 @@ namespace ProductivityTools.Purchase.Api.Database
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<Model.Purchase> Purchase { get; set; }
+        public DbSet<Contract.Purchase> Purchase { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("pc");
-            modelBuilder.Entity<Model.Purchase>()
+            modelBuilder.Entity<Contract.Purchase>()
                 .HasKey(x => x.Id);
-            modelBuilder.Entity<Model.Purchase>()
-               .Property(p => p.Id).HasColumnName("PurchaseId");
-            modelBuilder.Entity<Model.PurchaseItem>().HasKey(x => x.PurchaseItemId);
+            modelBuilder.Entity<Contract.PurchaseItem>()
+                .HasKey(x => x.Id);
 
             base.OnModelCreating(modelBuilder);
         }

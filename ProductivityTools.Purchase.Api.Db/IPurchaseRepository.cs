@@ -2,6 +2,6 @@
 {
     public interface IPurchaseRepository
     {
-        void AddPurchase(Model.Purchase puchase);
+        void AddPurchase(Contract.Purchase puchase);
     }
 }
