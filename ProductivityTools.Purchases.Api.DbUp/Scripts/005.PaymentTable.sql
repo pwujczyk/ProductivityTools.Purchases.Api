@@ -8,5 +8,6 @@
 
     [PurchaseId] INT,
 
-    CONSTRAINT FK_PaymentPurchase FOREIGN KEY (PurchaseId) REFERENCES Purchase(PurchaseId)
+    CONSTRAINT PK_Payment PRIMARY KEY (PaymentId),
+    CONSTRAINT FK_PaymentPurchase FOREIGN KEY (PurchaseId) REFERENCES [pc].Purchase(PurchaseId)
 )

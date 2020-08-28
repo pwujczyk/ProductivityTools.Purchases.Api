@@ -7,6 +7,6 @@
 	[PurchaseId] INT,
 	[ReturnId] INT,
 
-	CONSTRAINT FK_PurchaseItemPurchase FOREIGN KEY (PurchaseId) REFERENCES Purchase(PurchaseId),
-    CONSTRAINT FK_PurchaseItemReturn FOREIGN KEY ([ReturnId]) REFERENCES [Return]([ReturnId])
+	CONSTRAINT PK_PurchaseItem PRIMARY KEY ([PurchaseItemId]),
+	CONSTRAINT FK_PurchaseItemPurchase FOREIGN KEY (PurchaseId) REFERENCES [pc].[Purchase](PurchaseId)
 )

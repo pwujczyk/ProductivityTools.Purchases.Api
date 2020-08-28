@@ -12,12 +12,10 @@
     <None Remove="Scripts\003.DealerTable.sql" />
     <None Remove="Scripts\004.DeliveryTable.sql" />
     <None Remove="Scripts\005.PaymentTable.sql" />
-    <None Remove="Scripts\006.ReturnTable.sql" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Scripts\000.CreateSchema.sql" />
-    <EmbeddedResource Include="Scripts\006.ReturnTable.sql" />
     <EmbeddedResource Include="Scripts\005.PaymentTable.sql" />
     <EmbeddedResource Include="Scripts\004.DeliveryTable.sql" />
     <EmbeddedResource Include="Scripts\003.DealerTable.sql" />
