@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [pc].[Purchase]
 (
 	[PurchaseId] INT IDENTITY(1,1),
+    [ExternalSystemId]VARCHAR(100),
     [DeliveryAddress] VARCHAR(500),
     [ReceipmentPhone] VARCHAR(500),
     [Status] VARCHAR(100),

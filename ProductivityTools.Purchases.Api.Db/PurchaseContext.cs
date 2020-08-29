@@ -35,14 +35,14 @@ namespace ProductivityTools.Purchases.Api.Database
             modelBuilder.Entity<Purchase>(entity =>
             {
                 entity.HasKey(x => x.Id);
-                entity.Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseId");
-               // entity.HasMany(x => x.Items);
-               // entity.Property(x=>x.Dealer).
-              //  entity.HasOne<Dealer>().WithMany();
+                entity.Property(x => x.Id).HasColumnName("PurchaseId");
+                // entity.HasMany(x => x.Items);
+                // entity.Property(x=>x.Dealer).
+                //  entity.HasOne<Dealer>().WithMany();
             });
 
-          //  modelBuilder.Entity<Purchase>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseId");
-           
+            //  modelBuilder.Entity<Purchase>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseId");
+
             //modelBuilder.Entity<Purchase>().HasOne<Dealer>().WithMany();
 
             modelBuilder.Entity<PurchaseItem>(entity =>
