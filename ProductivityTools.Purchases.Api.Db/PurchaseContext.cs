@@ -36,9 +36,16 @@ namespace ProductivityTools.Purchases.Api.Database
             {
                 entity.HasKey(x => x.Id);
                 entity.Property(x => x.Id).HasColumnName("PurchaseId");
+                entity.HasOne(purchase => purchase.Dealer).WithOne(dealer => dealer.Purchase).HasForeignKey<Dealer>(dealer => dealer.PurchaseId);
                 // entity.HasMany(x => x.Items);
                 // entity.Property(x=>x.Dealer).
                 //  entity.HasOne<Dealer>().WithMany();
+            });
+
+            modelBuilder.Entity<Dealer>(entity =>
+            {
+                entity.HasKey(d => d.Id);
+                entity.Property(x => x.Id).HasColumnName("DealerId");
             });
 
             //  modelBuilder.Entity<Purchase>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseId");
@@ -53,11 +60,7 @@ namespace ProductivityTools.Purchases.Api.Database
 
             /// modelBuilder.Entity<PurchaseItem>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseItemId");
 
-            modelBuilder.Entity<Dealer>(entity =>
-            {
-                entity.HasKey(d => d.Id);
-                entity.Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("DealerId");
-            });
+
 
             // modelBuilder.Entity<Dealer>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("DealerId");
 
