@@ -4,6 +4,10 @@
 	[Name] VARCHAR(400),
 	[SinglePrice] DECIMAL(6,2),
 	[Amount] INT,
+	[Price] DECIMAL (6,2),
+	[ReturnedAmount] INT,
+	[ReturnedPrice] DECIMAL(6,2),
+
 	[PurchaseId] INT,
 	[ReturnId] INT,
 
