@@ -1,29 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProductivityTools.Purchases.Contract;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace ProductivityTools.Purchases.Api.Database.Mapping
 {
-    public class PurchaseMapping : EntityTypeConfiguration<Purchase>
+    public class PurchaseMapping : IEntityTypeConfiguration<Purchase>
     {
-        public PurchaseMapping()
+        public void Configure(EntityTypeBuilder<Purchase> builder)
         {
-            //HasKey(x => x.Id).
-
-            //Property(x=>x.Id).HasColumnName("PurchaseId");
-            //HasMany(x => x.Items);
-
-            ////HasOne<Dealer>().WithMany();
-
-            HasKey(x => x.Id);
-            Property(x => x.Id).HasColumnName("PurchaseId");
-           // Property(x => x.Id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
-
-            //HasMany(x => x.Items);
-            //HasOptional(x => x.Dealer);
-            //HasOne<Dealer>().WithMany();
-
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).HasColumnName("PurchaseId");
+            builder.HasOne(purchase => purchase.Dealer).WithOne(dealer => dealer.Purchase).HasForeignKey<Dealer>(dealer => dealer.PurchaseId);
         }
     }
 }

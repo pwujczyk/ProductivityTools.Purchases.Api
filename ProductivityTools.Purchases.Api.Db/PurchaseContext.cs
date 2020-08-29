@@ -5,6 +5,7 @@ using ProductivityTools.Purchases.Contract;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Debug;
+using ProductivityTools.Purchases.Api.Database.Mapping;
 
 namespace ProductivityTools.Purchases.Api.Database
 {
@@ -32,54 +33,12 @@ namespace ProductivityTools.Purchases.Api.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("pc");
-            modelBuilder.Entity<Purchase>(entity =>
-            {
-                entity.HasKey(x => x.Id);
-                entity.Property(x => x.Id).HasColumnName("PurchaseId");
-                entity.HasOne(purchase => purchase.Dealer).WithOne(dealer => dealer.Purchase).HasForeignKey<Dealer>(dealer => dealer.PurchaseId);
-                // entity.HasMany(x => x.Items);
-                // entity.Property(x=>x.Dealer).
-                //  entity.HasOne<Dealer>().WithMany();
-            });
 
-            modelBuilder.Entity<Dealer>(entity =>
-            {
-                entity.HasKey(d => d.Id);
-                entity.Property(x => x.Id).HasColumnName("DealerId");
-            });
-
-            //  modelBuilder.Entity<Purchase>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseId");
-
-            //modelBuilder.Entity<Purchase>().HasOne<Dealer>().WithMany();
-
-            modelBuilder.Entity<PurchaseItem>(entity =>
-            {
-                entity.HasKey(x => x.Id);
-                entity.Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseItemId");
-            });
-
-            /// modelBuilder.Entity<PurchaseItem>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PurchaseItemId");
-
-
-
-            // modelBuilder.Entity<Dealer>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("DealerId");
-
-
-            modelBuilder.Entity<Payment>(entity =>
-            {
-                entity.HasKey(d => d.Id);
-                entity.Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("PaymentId");
-            });
-
-            //modelBuilder.
-
-            modelBuilder.Entity<Delivery>(entity =>
-            {
-                entity.HasKey(d => d.Id);
-                entity.Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("DeliveryId");
-            });
-
-            //   modelBuilder.Entity<Delivery>().Property(x => x.Id).ValueGeneratedOnAdd().HasColumnName("DeliveryId");
+            modelBuilder.ApplyConfiguration(new PurchaseMapping());
+            modelBuilder.ApplyConfiguration(new DealerMapping());
+            modelBuilder.ApplyConfiguration(new PaymentMapping());
+            modelBuilder.ApplyConfiguration(new DeliveryMapping());
+            modelBuilder.ApplyConfiguration(new PurchaseItemMapping());
 
             base.OnModelCreating(modelBuilder);
         }
