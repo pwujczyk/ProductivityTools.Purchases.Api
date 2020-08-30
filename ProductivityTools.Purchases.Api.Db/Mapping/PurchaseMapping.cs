@@ -15,6 +15,7 @@ namespace ProductivityTools.Purchases.Api.Database.Mapping
             builder.HasOne(purchase => purchase.Dealer).WithOne(dealer => dealer.Purchase).HasForeignKey<Dealer>(dealer => dealer.PurchaseId);
             builder.HasOne(purchase => purchase.Payment).WithOne(payment => payment.Purchase).HasForeignKey<Payment>(payment => payment.PurchaseId);
             builder.HasMany(purchase => purchase.Items).WithOne(purchaseItem => purchaseItem.Purchase);
+            builder.HasMany(purchase => purchase.Delivery).WithOne(delivery => delivery.Purchase);
         }
     }
 }
