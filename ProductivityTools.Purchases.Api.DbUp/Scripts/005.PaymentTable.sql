@@ -2,7 +2,7 @@
 (
 	PaymentId INT IDENTITY(1,1),
 	[Date] Date,
-    [Amount] decimal,
+    [Amount] decimal(6,2),
     [Type] VARCHAR(20),
     [Status] VARCHAR(200),
 
