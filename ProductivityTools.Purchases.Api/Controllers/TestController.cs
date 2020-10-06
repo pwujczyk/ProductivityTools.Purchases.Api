@@ -11,9 +11,18 @@ namespace ProductivityTools.Purchases.Api.Controllers
     public class TestController : Controller
     {
         [HttpGet]
-        public string Index()
+        [Route("Hi")]
+
+        public object Hi()
         {
-            return DateTime.Now.ToString();
+            return new { Hi = $"Hi unsecured {DateTime.Now}" };
+        }
+
+        [HttpGet]
+        [Route("HiSecure")]
+        public object HiSecure()
+        {
+            return new { Hi = $"Hi secured {DateTime.Now}" };
         }
     }
 }

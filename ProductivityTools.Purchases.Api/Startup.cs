@@ -28,6 +28,14 @@ namespace ProductivityTools.Purchases.Api
         {
             services.AddControllers();
             services.RegisterePurchaseServices();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("policy",
+                    builder =>
+                    {
+                        builder.WithOrigins().AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +45,7 @@ namespace ProductivityTools.Purchases.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors("policy");
 
             app.UseHttpsRedirection();
 
