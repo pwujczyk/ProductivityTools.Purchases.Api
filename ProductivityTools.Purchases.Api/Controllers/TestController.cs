@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProductivityTools.Purchases.Api.Controllers
@@ -20,6 +21,7 @@ namespace ProductivityTools.Purchases.Api.Controllers
 
         [HttpGet]
         [Route("HiSecure")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public object HiSecure()
         {
             return new { Hi = $"Hi secured {DateTime.Now}" };

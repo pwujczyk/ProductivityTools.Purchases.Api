@@ -36,6 +36,17 @@ namespace ProductivityTools.Purchases.Api
                         builder.WithOrigins().AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     });
             });
+
+            services.AddAuthentication("Bearer")
+             .AddJwtBearer("Bearer", options =>
+             {
+                 // identity server issuing token
+                 options.Authority = "https://localhost:5001";
+                 options.RequireHttpsMetadata = false;
+
+                 // the scope id of this api
+                 options.Audience = "api";
+             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +63,7 @@ namespace ProductivityTools.Purchases.Api
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
