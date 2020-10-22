@@ -43,9 +43,8 @@ namespace ProductivityTools.Purchases.Api
                  // identity server issuing token
                  options.Authority = "https://localhost:5001";
                  options.RequireHttpsMetadata = false;
-
                  // the scope id of this api
-                 options.Audience = "api";
+                 options.Audience = "purchase.api";
              });
         }
 
