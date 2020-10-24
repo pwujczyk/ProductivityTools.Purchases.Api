@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Purchases.Api.Command", "ProductivityTools.Purchases.Api.Command\ProductivityTools.Purchases.Api.Command.csproj", "{C5884FA5-1231-478D-BEF4-A0C335B97401}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.MasterConfiguration", "..\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration.csproj", "{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{C5884FA5-1231-478D-BEF4-A0C335B97401}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5884FA5-1231-478D-BEF4-A0C335B97401}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5884FA5-1231-478D-BEF4-A0C335B97401}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E31B370-35EB-44B7-BF0F-BFF178AAEDC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

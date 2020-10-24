@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using ProductivityTools.MasterConfiguration;
+//using ProductivityTools.MasterConfiguration;
 
 namespace ProductivityTools.Purchases.Api
 {
@@ -20,7 +20,7 @@ namespace ProductivityTools.Purchases.Api
             Host.CreateDefaultBuilder(args)
                  .ConfigureAppConfiguration((hostingContext, config) =>
                  {
-                     config.AddMasterConfiguration();
+                     //config.AddMasterConfiguration();
                  })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
