@@ -29,7 +29,7 @@ namespace ProductivityTools.Purchases.Api
         {
             services.AddCors(options =>
             {
-                options.AddPolicy(policy,
+                options.AddDefaultPolicy(
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:3000").WithHeaders("Authorization").WithMethods("get","options");
@@ -58,9 +58,9 @@ namespace ProductivityTools.Purchases.Api
                 app.UseDeveloperExceptionPage();
             }
             app.UseHttpsRedirection();
-            
-            app.UseCors(policy);
             app.UseRouting();
+            app.UseCors();
+           
             app.UseAuthorization();
             app.UseAuthentication();
 
