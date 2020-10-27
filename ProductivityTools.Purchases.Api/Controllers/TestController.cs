@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProductivityTools.Purchases.Api.Controllers
@@ -13,7 +14,7 @@ namespace ProductivityTools.Purchases.Api.Controllers
     {
         [HttpGet]
         [Route("Hi")]
-
+        [EnableCors("policy")]
         public object Hi()
         {
             return new { Hi = $"Hi unsecured {DateTime.Now}" };
