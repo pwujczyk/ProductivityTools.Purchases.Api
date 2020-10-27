@@ -10,7 +10,7 @@ namespace ProductivityTools.Purchases.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    
+    [EnableCors("policy")]
     public class TestController : Controller
     {
         [HttpGet]
