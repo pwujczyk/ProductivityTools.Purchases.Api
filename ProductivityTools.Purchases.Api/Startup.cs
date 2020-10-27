@@ -32,7 +32,7 @@ namespace ProductivityTools.Purchases.Api
                 options.AddPolicy(policy,
                     builder =>
                     {
-                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                        builder.WithOrigins("http://localhost:3000");
                     });
             });
 
