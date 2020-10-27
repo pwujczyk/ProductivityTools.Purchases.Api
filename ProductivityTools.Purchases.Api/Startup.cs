@@ -59,14 +59,14 @@ namespace ProductivityTools.Purchases.Api
             }
             app.UseHttpsRedirection();
             app.UseRouting();
-           // app.UseCors(policy);
+            app.UseCors(policy);
             app.UseAuthorization();
             app.UseAuthentication();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
