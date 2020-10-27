@@ -57,9 +57,10 @@ namespace ProductivityTools.Purchases.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(policy);
             app.UseHttpsRedirection();
             app.UseRouting();
-            app.UseCors(policy);
+
            
             app.UseAuthorization();
             app.UseAuthentication();
