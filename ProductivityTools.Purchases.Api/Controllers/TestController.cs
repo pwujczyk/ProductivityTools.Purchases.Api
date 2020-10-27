@@ -13,8 +13,8 @@ namespace ProductivityTools.Purchases.Api.Controllers
     public class TestController : Controller
     {
         [HttpGet]
-        [Route("Hi")]
         [EnableCors("policy")]
+        [Route("Hi")]
         public object Hi()
         {
             return new { Hi = $"Hi unsecured {DateTime.Now}" };
