@@ -65,7 +65,7 @@ namespace ProductivityTools.Purchases.Api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers().RequireCors(policy);
+                endpoints.MapControllers();
             });
         }
     }
