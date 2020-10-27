@@ -32,7 +32,7 @@ namespace ProductivityTools.Purchases.Api
                 options.AddPolicy(name: policy,
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:3000").WithHeaders("Authorization").WithMethods("get","options");
+                        builder.WithOrigins("http://localhost:3000").SetIsOriginAllowed((host) => true).WithHeaders("Authorization").WithMethods("get","options");
                     });
             });
 
@@ -57,11 +57,11 @@ namespace ProductivityTools.Purchases.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(policy);
+         
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors(policy);
 
-           
             app.UseAuthorization();
             app.UseAuthentication();
 
