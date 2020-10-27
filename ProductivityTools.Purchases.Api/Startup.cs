@@ -33,7 +33,7 @@ namespace ProductivityTools.Purchases.Api
                 options.AddPolicy("policy",
                     builder =>
                     {
-                        builder.WithOrigins().AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     });
             });
 

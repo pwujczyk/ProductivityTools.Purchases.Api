@@ -1,0 +1,8 @@
+#@host=localhost
+#@port=58197
+
+@host=purchase.productivitytools.tech
+@port=8088
+
+
+GET http://{{host}}:{{port}}/Test/Hi HTTP/1.1
