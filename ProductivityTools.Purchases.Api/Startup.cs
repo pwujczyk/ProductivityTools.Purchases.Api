@@ -60,7 +60,11 @@ namespace ProductivityTools.Purchases.Api
          
             app.UseHttpsRedirection();
             app.UseRouting();
-            app.UseCors(policy);
+            app.UseCors(x => x
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetIsOriginAllowed(origin => true) // allow any origin
+            .AllowCredentials()); // allow credentials
 
             app.UseAuthorization();
             app.UseAuthentication();
