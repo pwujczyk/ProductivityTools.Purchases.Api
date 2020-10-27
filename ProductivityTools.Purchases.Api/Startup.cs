@@ -16,6 +16,7 @@ namespace ProductivityTools.Purchases.Api
 {
     public class Startup
     {
+        readonly string policy = "policy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,16 +27,17 @@ namespace ProductivityTools.Purchases.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.RegisterePurchaseServices();
             services.AddCors(options =>
             {
-                options.AddPolicy("policy",
+                options.AddPolicy(policy,
                     builder =>
                     {
                         builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                     });
             });
+
+            services.AddControllers();
+            services.RegisterePurchaseServices();   
 
             services.AddAuthentication("Bearer")
              .AddJwtBearer("Bearer", options =>
@@ -55,12 +57,9 @@ namespace ProductivityTools.Purchases.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("policy");
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseCors(policy);
             app.UseAuthorization();
             app.UseAuthentication();
 
