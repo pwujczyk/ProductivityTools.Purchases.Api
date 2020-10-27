@@ -32,7 +32,7 @@ namespace ProductivityTools.Purchases.Api
                 options.AddPolicy(policy,
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost").AllowAnyHeader().AllowAnyMethod().Build();
+                        builder.WithOrigins("http://localhost").AllowAnyHeader().AllowAnyMethod();
                     });
             });
 
@@ -65,7 +65,7 @@ namespace ProductivityTools.Purchases.Api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers().RequireCors(policy);
             });
         }
     }
