@@ -27,9 +27,6 @@ namespace ProductivityTools.Purchases.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.RegisterePurchaseServices();
-
             services.AddCors(options =>
             {
                 options.AddPolicy(name: policy,
@@ -39,14 +36,14 @@ namespace ProductivityTools.Purchases.Api
                     });
             });
 
-            
-           
+            services.AddControllers();
+            services.RegisterePurchaseServices();   
 
             services.AddAuthentication("Bearer")
              .AddJwtBearer("Bearer", options =>
              {
                  // identity server issuing token
-                 options.Authority = "https://localhost:5001";
+                 options.Authority = "https://identityserver.productivitytools.tech:8084/";
                  options.RequireHttpsMetadata = false;
                  // the scope id of this api
                  options.Audience = "purchase.api";
