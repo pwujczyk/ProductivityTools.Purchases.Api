@@ -27,6 +27,9 @@ namespace ProductivityTools.Purchases.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.RegisterePurchaseServices();
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: policy,
@@ -36,8 +39,8 @@ namespace ProductivityTools.Purchases.Api
                     });
             });
 
-            services.AddControllers();
-            services.RegisterePurchaseServices();   
+            
+           
 
             services.AddAuthentication("Bearer")
              .AddJwtBearer("Bearer", options =>
