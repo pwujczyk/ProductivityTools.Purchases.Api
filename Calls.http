@@ -1,8 +1,16 @@
 #@host=localhost
 #@port=58197
 
+#@host=192.168.0.51
+#@port=8086
+
 @host=purchase.productivitytools.tech
 @port=8088
 
 
+
 GET http://{{host}}:{{port}}/Test/Hi HTTP/1.1
+
+
+###
+GET http://{{host}}:{{port}}/Test/HiSecure HTTP/1.1

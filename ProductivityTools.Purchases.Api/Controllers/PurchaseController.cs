@@ -27,5 +27,12 @@ namespace ProductivityTools.Purchases.Api.Controllers
             this.PurchaseCommand.AddPurchase(purchase);
             return HttpStatusCode.OK;
         }
+
+        [HttpPost]
+        [Route("List")]
+        public List<Purchase> List()
+        {
+            return new List<Purchase>();
+        }
     }
 }
