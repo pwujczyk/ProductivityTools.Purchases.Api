@@ -1,0 +1,23 @@
+@startuml
+
+title Architecture
+
+node Application{
+    [Api]
+    [Command]
+    [Queries]
+    [Database]
+}
+
+node DatabaseMigration{
+    [DbUp]
+}
+
+Api -down->Command
+Api -down->Queries
+Command -down->Database
+Queries -down->Database
+
+DbUp -up->Database
+
+@enduml
