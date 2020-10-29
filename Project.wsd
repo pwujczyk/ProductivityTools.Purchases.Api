@@ -13,11 +13,20 @@ node DatabaseMigration{
     [DbUp]
 }
 
+database "SQL\n" {
+    [Data]
+}
+
 Api -down->Command
 Api -down->Queries
 Command -down->Database
 Queries -down->Database
+Database -down->Data
 
-DbUp -up->Database
+DbUp -up->Data
+
+
+
+
 
 @enduml
