@@ -32,7 +32,9 @@ namespace ProductivityTools.Purchases.Api.Controllers
         [Route("List")]
         public List<Purchase> List()
         {
-            return new List<Purchase>();
+            var r= new List<Purchase>();
+            r.Add(new Purchase() { Status="done"});
+            return r;
         }
     }
 }
