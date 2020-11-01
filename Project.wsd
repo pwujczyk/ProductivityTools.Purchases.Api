@@ -1,6 +1,6 @@
 @startuml
 
-title Architecture
+title Aplication Architecture
 
 node Application{
     [Api]
