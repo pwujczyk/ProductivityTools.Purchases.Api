@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductivityTools.Purchases.Api.Command;
 using ProductivityTools.Purchases.Contract;
@@ -28,8 +29,9 @@ namespace ProductivityTools.Purchases.Api.Controllers
             return HttpStatusCode.OK;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("List")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public List<Purchase> List()
         {
             var r= new List<Purchase>();
