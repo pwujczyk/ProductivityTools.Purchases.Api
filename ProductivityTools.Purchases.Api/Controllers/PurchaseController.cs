@@ -34,8 +34,9 @@ namespace ProductivityTools.Purchases.Api.Controllers
         [Authorize(AuthenticationSchemes = "Bearer")]
         public List<Purchase> List()
         {
-            var r= new List<Purchase>();
-            r.Add(new Purchase() { Status="done"});
+            var r = new List<Purchase>();
+            r.Add(new Purchase() { Status = "done" });
+            r.Add(new Purchase() { Status = "in progress" });
             return r;
         }
     }
