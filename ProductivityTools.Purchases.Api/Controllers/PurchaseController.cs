@@ -35,7 +35,7 @@ namespace ProductivityTools.Purchases.Api.Controllers
         public List<Purchase> List()
         {
             var r = new List<Purchase>();
-            r.Add(new Purchase() { Id=1, Status = "done" });
+            r.Add(new Purchase() { Id = 1, Status = "done" });
             r.Add(new Purchase() { Id = 2, Status = "in progress" });
             return r;
         }
