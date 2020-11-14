@@ -1,0 +1,37 @@
+@startuml
+
+title Solution Architecture
+
+node Allegro{
+    [Portal]
+}
+
+node User{
+    [Allegro.Cmdlet]
+    [Browser]
+}
+
+node Azure{
+    [ServiceBus]
+    [AzureFunction]
+}
+
+node Server{
+    [API]
+    database "SQL\n" {
+    [Data]
+
+}
+
+Portal ->Allegro.Cmdlet
+
+Allegro.Cmdlet -down->ServiceBus
+ServiceBus -down-> AzureFunction
+AzureFunction -down-> API
+API -down->Data
+Browser -down->API
+
+
+
+
+@enduml
