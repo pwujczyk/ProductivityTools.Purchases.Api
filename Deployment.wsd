@@ -1,0 +1,43 @@
+@startuml
+
+title Deployment Architecture
+
+agent "Publish-ModuleToPowershellGallery"
+agent "AzureDevops"
+agent "Jenkins"
+agent "GithubActions"
+
+artifact "Contract"
+
+node User{
+    [Allegro.Cmdlet]
+}
+
+node Azure{
+    [ServiceBus]
+    [AzureFunction]
+}
+
+node Server{
+    [API]
+    database "SQL\n" {
+    [Data]
+
+}
+
+[Publish-ModuleToPowershellGallery] -> Allegro.Cmdlet
+[AzureDevops] -> ServiceBus
+[AzureDevops] -> AzureFunction
+[Jenkins]  -> API
+[GithubActions] -> Contract
+
+Allegro.Cmdlet -down->ServiceBus
+ServiceBus -down-> AzureFunction
+AzureFunction -down-> API
+API -down->Data
+
+
+
+
+
+@enduml

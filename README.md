@@ -16,5 +16,13 @@
 <!--more-->
 
 <!--og-image-->
--![Architecture](Images/Architecture.png)
+![Architecture](Images/Architecture.png)
+
+## Solution Architecture
+
+![Architecture](Images/SolutionArchitecture.png)
+
+## Deployment architecture
+
+![Architecture](Images/DeploymentProcess.png)
 
